@@ -1,0 +1,19 @@
+{
+  "name": "easy-slider",
+  "version": "1.0.0",
+  "description": "easy-slider for webpack",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "html-loader": "^0.4.3",
+    "jquery": "^1.12.4",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  }
+}
