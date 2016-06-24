@@ -2,30 +2,109 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56e43b6b-7d90-4d8d-98af-c3987c3aa17d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/img/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/img/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/img/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/img/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/img/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/jsEvent.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/css/module/dialog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/css/module/footer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/css/module/header.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/css/module/slide.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/css/page/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/css/page/jsEvent.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/css/vendor/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/js/module/dialog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/js/module/dialogConfig.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/js/module/header.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/js/module/jsEvent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/js/module/slide.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/js/page/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/js/page/jsEvent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/src/template/module/dialog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack/easySlider/webpack.config.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/.coding-ide/settings.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/amd/bundle1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/amd/bundle2.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/amd/example1.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/amd/example1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/amd/example2.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/amd/example2.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/amd/example2.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/commonjs/bundle1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/commonjs/example1.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/commonjs/example1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/commonjs/example1.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/node-modules-and-npm/example1/bundle1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/node-modules-and-npm/example1/example1.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/node-modules-and-npm/example1/example1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/node-modules-and-npm/example1/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/node-modules-and-npm/example2/bundle2.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/node-modules-and-npm/example2/example2.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/node-modules-and-npm/example2/example2.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/node-modules-and-npm/example2/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/non-moduler/bundle1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/non-moduler/example1.1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/non-moduler/example1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/umd/bundle1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/umd/bundle1.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/umd/example1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter2/umd/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example1/1.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example1/2.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example1/a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example1/b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example1/bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example1/c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example1/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example1/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/1.bundle.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/2.bundle.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/bundle.main1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/bundle.main2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/main.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/chunks/example2/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example1/a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example1/b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example1/bundle.main1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example1/bundle.main2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example1/c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example1/main.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example1/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example1/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/bundle.main1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/bundle.main2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/main.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example2/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example3/a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example3/b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example3/bundle.main1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example3/bundle.main2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example3/c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example3/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example3/main.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example3/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example3/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/common-chunks-plugin/example3/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example1/bundle1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example1/example1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example1/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example2/10b9ac4df68731c60a9e.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example2/a0a3cb0af757e3e5a69d.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example2/example2.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example2/example2.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example2/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example3/example3.1-36576c3d23f5bbcf522b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example3/example3.1-cb445f1703f84abecc3f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example3/example3.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example3/example3.2-493d706982a2b0179f6c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example3/example3.2-cb445f1703f84abecc3f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example3/example3.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example3/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example4/dist/example4.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example4/dist/hello/example4.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example4/src/example4.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example4/src/hello/example4.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter3/config/example4/webpack.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter4/exports-loader/example1/bundle.main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter4/exports-loader/example1/example1.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter4/exports-loader/example1/example1.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/github/webpack-guide/examples/chapter4/exports-loader/example1/index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webpack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +124,28 @@
     <favorites_list name="webpack" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/github/gulp-webpack-demo/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/github/gulp-webpack-demo/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -172,11 +272,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="books" />
+              <option name="myItemId" value="github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webpack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webpack" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webpack-handbook" />
+              <option name="myItemId" value="github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-webpack-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webpack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webpack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-webpack-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webpack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webpack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp-webpack-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -276,25 +438,25 @@
       <workItem from="1466127586650" duration="1244000" />
       <workItem from="1466477253964" duration="11745000" />
       <workItem from="1466566612301" duration="20635000" />
-      <workItem from="1466662846001" duration="9388000" />
+      <workItem from="1466662846001" duration="12207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43796000" />
+    <option name="totallyTimeSpent" value="46615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16649105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16649105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3391116" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3846154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -317,28 +479,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/github/easySlide/dist2/index.js" />
-    <entry file="file://$PROJECT_DIR$/github/easySlide/dist/2.chunk.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="0" column="737" selection-start-line="0" selection-start-column="737" selection-end-line="0" selection-end-column="737" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/github/easySlide2/dist/2.chunk.js.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1775">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/github/easySlide2/dist/commons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-517">
@@ -721,6 +867,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/github/gulp-webpack-demo/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/github/gulp-webpack-demo/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/github/gulp-webpack-demo/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding />
         </state>
       </provider>
