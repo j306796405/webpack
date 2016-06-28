@@ -38,7 +38,8 @@ module.exports = {
             core: srcDir + "/js/core",
             ui: srcDir + "/js/ui",
             artTemplate: srcDir + "/js/lib/template-native.js",
-            fly: srcDir + "/js/lib/jquery.fly.js"
+            fly: srcDir + "/js/lib/jquery.fly.js",
+            requestAnimationFrame: srcDir + "/js/lib/requestAnimationFrame.js",
         }
     },
     plugins: [

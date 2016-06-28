@@ -5,6 +5,7 @@
  */
 var $ = require('jquery'),
     template = require('artTemplate'),
+    requestAnimationFrame = require('requestAnimationFrame'),
     fly = require('fly');
 
 $('.container').on('click', addProduct);
