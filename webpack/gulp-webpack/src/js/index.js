@@ -6,8 +6,12 @@
 var $ = require('jquery'),
     template = require('artTemplate');
 
-var $cartWrapper = $('.J_cart_wrapper');
 var data = {
+    selected: 0,
+    price: 123,
+    discount: 123,
+    tax: 123,
+    priceWithTax: 123,
     isChecked: false,
     products: [
         {
@@ -74,120 +78,148 @@ var data = {
     ]
 }
 
-renderCart(data);
+function Cart(cartData, cartWrapper, templateId){
+    this.__cartData = cartData;
+    this.__cartWrapper = cartWrapper;
+    this.__templateId = templateId;
 
-//绑定产品点击事件
-$('.J_cart_wrapper').on('click', '.J_check_product', function(){
-    var $this = $(this),
-        specPerformIndex = $this.data('spec-perform-index'),
-        productIndex = $this.data('product-index'),
-        isChecked = $this.prop('checked');
-    checkProduct(specPerformIndex, productIndex, isChecked);
-})
-
-//绑定专场点击事件
-$('.J_cart_wrapper').on('click', '.J_check_specPerform', function(){
-    var $this = $(this),
-        specPerformIndex = $this.data('spec-perform-index'),
-        isChecked = $this.prop('checked');
-    checkSpecPerform(specPerformIndex, isChecked);
-})
-
-//绑定全选点击事件
-$('.J_cart_wrapper').on('click', '.J_check_all', function(){
-    var $this = $(this),
-        isChecked = $this.prop('checked');
-    checkAll(isChecked);
-})
-
-$('.J_cart_wrapper').on('click', '.J_minus_product', function(){
-    var $this = $(this),
-        total = $this.data('total'),
-        specPerformIndex = $this.data('spec-perform-index'),
-        productIndex = $this.data('product-index');
-    if(total > 1){
-        data.products[specPerformIndex].forSales[productIndex].total = (total - 1);
+    this._init = function(){
+        this._bind();
     }
-    renderCart(data);
-})
 
-$('.J_cart_wrapper').on('click', '.J_add_product', function(){
-    var $this = $(this),
-        total = $this.data('total'),
-        specPerformIndex = $this.data('spec-perform-index'),
-        productIndex = $this.data('product-index');
-    data.products[specPerformIndex].forSales[productIndex].total = (total + 1);
-    renderCart(data);
-})
+    this._bind = function(){
+        var self = this;
+        //绑定产品点击事件
+        $('.J_cart_wrapper').on('click', '.J_check_product', function(){
+            var $this = $(this),
+                specPerformIndex = $this.data('spec-perform-index'),
+                productIndex = $this.data('product-index'),
+                isChecked = $this.prop('checked');
+            self._checkProductCheckbox(specPerformIndex, productIndex, isChecked);
+        })
 
-$('.J_cart_wrapper').on('click', '.J_delete_product', function(){
-    var $this = $(this),
-        specPerformIndex = $this.data('spec-perform-index'),
-        productIndex = $this.data('product-index');
+        //绑定专场点击事件
+        $('.J_cart_wrapper').on('click', '.J_check_specPerform', function(){
+            var $this = $(this),
+                specPerformIndex = $this.data('spec-perform-index'),
+                isChecked = $this.prop('checked');
+            self._checkSpecPerform(specPerformIndex, isChecked);
+        })
 
-    data.products[specPerformIndex].forSales.splice(productIndex, 1);
-    filterAllCheckboxs();
-    renderCart(data);
-})
+        //绑定全选点击事件
+        $('.J_cart_wrapper').on('click', '.J_check_all', function(){
+            var $this = $(this),
+                isChecked = $this.prop('checked');
+            self._checkAll(isChecked);
+        })
 
-//判断是否所有产品全选
-function filterAllCheckboxs(){
-    data.isChecked = true;
-    $.each(data.products, function(i, specPerform){
-        specPerform.isChecked = true;
-        if(!specPerform.isChecked){
-            data.isChecked = false;
-            return false;
-        }
-        $.each(specPerform.forSales, function(j, product){
+        //点击减少按钮
+        $('.J_cart_wrapper').on('click', '.J_minus_product', function(){
+            var $this = $(this),
+                total = $this.data('total'),
+                specPerformIndex = $this.data('spec-perform-index'),
+                productIndex = $this.data('product-index');
+            if(total > 1){
+                self.__cartData.products[specPerformIndex].forSales[productIndex].total = (total - 1);
+            }
+            self._renderCart();
+        })
+
+        //点击增加按钮
+        $('.J_cart_wrapper').on('click', '.J_add_product', function(){
+            var $this = $(this),
+                total = $this.data('total'),
+                specPerformIndex = $this.data('spec-perform-index'),
+                productIndex = $this.data('product-index'),
+                limitNum = self.__cartData.products[specPerformIndex].forSales[productIndex].limitNum;
+            if(total < limitNum){
+                self.__cartData.products[specPerformIndex].forSales[productIndex].total = (total + 1);
+            }
+            self._renderCart();
+        })
+
+        $('.J_cart_wrapper').on('click', '.J_delete_product', function(){
+            var $this = $(this),
+                specPerformIndex = $this.data('spec-perform-index'),
+                productIndex = $this.data('product-index');
+
+            self.__cartData.products[specPerformIndex].forSales.splice(productIndex, 1);
+            self._checkProductCheckbox(specPerformIndex, null, null);
+            self._renderCart();
+        })
+    }
+
+    this._init();
+}
+
+Cart.prototype = {
+    constructor: Cart,
+    //绘制购物车
+    _renderCart: function(){
+        this._syncModel();
+        var html = template(this.__templateId, this.__cartData);
+        $(this.__cartWrapper).html(html);
+    },
+    //同步Model, 更新全选checkbox，discount， price, priceWithTax, tax
+    _syncModel: function(){
+        var discount,
+            price = 0,
+            priceWithTax,
+            selected = 0,
+            tax,
+            self = this;
+
+        self.__cartData.isChecked = true;
+        $.each(self.__cartData.products, function(i, specPerform){
+            if(!specPerform.isChecked){
+                self.__cartData.isChecked = false;
+            }
+            $.each(specPerform.forSales, function(i, product){
+                if(product.isChecked){
+                    price += (product.price * product.total);
+                    selected += 1;
+                }
+            })
+        })
+        self.__cartData.price = price;
+        self.__cartData.selected = selected;
+    },
+    //点击产品checkbox
+    _checkProductCheckbox: function(specPerformIndex, productIndex, isChecked){
+        var self = this;
+        self.__cartData.products[specPerformIndex].isChecked = true;
+        $.each(self.__cartData.products[specPerformIndex].forSales, function(i, product){
+            if(productIndex === i){
+                product.isChecked = isChecked;
+            }
             if(!product.isChecked){
-                data.isChecked = false;
-                specPerform.isChecked = false;
+                self.__cartData.products[specPerformIndex].isChecked = false;
             }
         })
-    })
-}
-
-//点击产品
-function checkProduct(specPerformIndex, productIndex, isChecked){
-    data.products[specPerformIndex].isChecked = true;
-    $.each(data.products[specPerformIndex].forSales, function(i, product){
-        if(productIndex === i){
-            product.isChecked = isChecked;
-        }
-        if(!product.isChecked){
-            data.products[specPerformIndex].isChecked = false;
-        }
-    })
-    filterAllCheckboxs();
-    renderCart(data);
-}
-
-//点击专场全选
-function checkSpecPerform(specPerformIndex, isChecked){
-    data.products[specPerformIndex].isChecked = isChecked;
-    $.each(data.products[specPerformIndex].forSales, function(i, product){
-        product.isChecked = isChecked;
-    })
-    filterAllCheckboxs();
-    renderCart(data);
-}
-
-//点击所有全选
-function checkAll(isChecked){
-    data.isChecked = isChecked;
-    $.each(data.products, function(i, specPerform){
-        specPerform.isChecked = isChecked;
-        $.each(data.products[i].forSales, function(j, product){
+        this._renderCart();
+    },
+    //点击专场checkbox
+    _checkSpecPerform: function(specPerformIndex, isChecked){
+        var self = this;
+        self.__cartData.products[specPerformIndex].isChecked = isChecked;
+        $.each(self.__cartData.products[specPerformIndex].forSales, function(i, product){
             product.isChecked = isChecked;
         })
-    })
-
-    renderCart(data);
+        self._renderCart();
+    },
+    //点击所有全选
+    _checkAll: function(isChecked){
+        var self = this;
+        self.__cartData.isChecked = isChecked;
+        $.each(self.__cartData.products, function(i, specPerform){
+            specPerform.isChecked = isChecked;
+            $.each(self.__cartData.products[i].forSales, function(j, product){
+                product.isChecked = isChecked;
+            })
+        })
+        self._renderCart();
+    }
 }
 
-//绘制购物车
-function renderCart(data){
-    var html = template('cartTemplate', data);
-    $cartWrapper.html(html);
-}
+var cart = new Cart(data, '.J_cart_wrapper', 'J_cartTemplate');
+cart._renderCart();

@@ -24,42 +24,7 @@
     <div class="table_list mt10">
         <div class="J_cart_wrapper"></div>
 
-        <div class="total clearfix">
-            <div class="cost">
-                <ul class="cost-txt clearfix">
-                    <li><em>已选 <span class="red" id="chkindex">6</span> 件，商品总金额： </em><i class="red f16b pl8"> ¥<span
-                            id="prtotalAmt">582.00</span> </i></li>
-                    <li><em>已优惠 ： </em><i class="red f16b">-¥ <span id="privilege">0.00</span></i></li><!-- 0 -->
-                    <li><em>总税额 ： </em><i class="red f16b pl8"> ¥ <span id="totalRate">69.24</span></i></li>
-                    <li><em>应付金额(含税)： </em><i class="red f16b pl8"> ¥ <span id="payment">651.24</span></i></li>
 
-                </ul>
-                <!-- -<p class="mt20"><span class="f12">下单后，请在 <i class="red">30分钟</i> 内完成支付</span>  -->
-                <p></p>
-                <div id="warnInfo1" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text2">海外购商品购满0元才可下单。</span>
-                </div>
-                <p></p>
-                <p></p>
-                <div id="warnInfo2" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text3">海外购商品税额已超过50元，商品应征税额在50元（含50元）以下的，海关予以免税。请您分批下单。</span>
-                </div>
-                <p></p>
-                <p></p>
-                <div id="warnInfo3" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text3">海外购商品总金额已超过2000元，请联系客服。</span>
-                </div>
-                <p></p>
-                <p></p>
-                <div id="warnInfo4" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text3">您已经超过海关规定单次购买2000元的规定，请分开下单。</span>
-                </div>
-                <p></p>
-			<span id="handle_span" class="tjbtnbox">
-				<button id="handlebtn" class="btn btnA">提交订单</button>
-				<span id="handle_span_nobuy" style="display:none;">
-					<button type="button" disabled="disabled" class="btn btnA2">提交订单</button>
-				</span>
-			</span>
-                <p></p>
-            </div>
-        </div>
     </div>
 
     <div class="know">
@@ -76,7 +41,7 @@
 
 </div>
 
-<script id="cartTemplate" type="text/html">
+<script id="J_cartTemplate" type="text/html">
     <table class="ac mb10">
         <% for (var i = 0; i < products.length; i ++) { %>
             <thead>
@@ -156,6 +121,40 @@
                 <input type="checkbox" class="J_check_all" <%= isChecked ? 'checked' : '' %>>全选</label>
             <a href="javascript:clearcart()" class="ml30">清空购物车</a></p>
         <p class="mt30"><a onclick="goindex();" class="purples f14">继续购物</a></p>
+    </div>
+    <div class="total clearfix">
+        <div class="cost">
+            <ul class="cost-txt clearfix">
+                <li><em>已选 <span class="red" id="chkindex"><%= selected %></span> 件，商品总金额： </em>
+                    <i class="red f16b pl8"> ¥<span id="prtotalAmt"><%= price %></span> </i></li>
+                <li><em>已优惠 ： </em><i class="red f16b">-¥ <span id="privilege">0.00</span></i></li><!-- 0 -->
+                <li><em>总税额 ： </em><i class="red f16b pl8"> ¥ <span id="totalRate">69.24</span></i></li>
+                <li><em>应付金额(含税)： </em><i class="red f16b pl8"> ¥ <span id="payment">651.24</span></i></li>
+            </ul>
+            <p></p>
+            <div id="warnInfo1" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text2">海外购商品购满0元才可下单。</span>
+            </div>
+            <p></p>
+            <p></p>
+            <div id="warnInfo2" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text3">海外购商品税额已超过50元，商品应征税额在50元（含50元）以下的，海关予以免税。请您分批下单。</span>
+            </div>
+            <p></p>
+            <p></p>
+            <div id="warnInfo3" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text3">海外购商品总金额已超过2000元，请联系客服。</span>
+            </div>
+            <p></p>
+            <p></p>
+            <div id="warnInfo4" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text3">您已经超过海关规定单次购买2000元的规定，请分开下单。</span>
+            </div>
+            <p></p>
+			<span id="handle_span" class="tjbtnbox">
+				<button id="handlebtn" class="btn btnA">提交订单</button>
+				<span id="handle_span_nobuy" style="display:none;">
+					<button type="button" disabled="disabled" class="btn btnA2">提交订单</button>
+				</span>
+			</span>
+            <p></p>
+        </div>
     </div>
 </script>
 
