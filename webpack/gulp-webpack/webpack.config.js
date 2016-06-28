@@ -37,7 +37,8 @@ module.exports = {
             jquery: srcDir + "/js/lib/jquery.min.js",
             core: srcDir + "/js/core",
             ui: srcDir + "/js/ui",
-            artTemplate: srcDir + "/js/lib/template-native.js"
+            artTemplate: srcDir + "/js/lib/template-native.js",
+            fly: srcDir + "/js/lib/jquery.fly.js"
         }
     },
     plugins: [

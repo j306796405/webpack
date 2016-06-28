@@ -5,7 +5,6 @@
  */
 var $ = require('jquery'),
     template = require('artTemplate');
-
 var data = {
     selected: 0,
     price: 123,
@@ -138,6 +137,7 @@ function Cart(cartData, cartWrapper, templateId){
             self._renderCart();
         })
 
+        //点击删除产品按钮
         $('.J_cart_wrapper').on('click', '.J_delete_product', function(){
             var $this = $(this),
                 specPerformIndex = $this.data('spec-perform-index'),
