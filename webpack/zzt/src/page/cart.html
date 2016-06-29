@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/public.css">
+    <link rel="stylesheet" href="dist/css/cart.css">
+</head>
+<body>
+<button id="popupBtn">Popup</button>
+<div id="bPopup" style="color: white; text-align: center; width: 100%;">What The Fuck</div>
+<div class="container hidden" id="cartdetail">
+    <div class="bd_tit mt20"><i class="cart_tit_ico"></i>我的购物车</div>
+    <table class="table_list_hd ac">
+        <thead>
+        <tr>
+            <th width="5%">选择</th>
+            <th>商品</th>
+            <th width="15%">单价(元)</th>
+            <th width="15%">数量</th>
+            <th width="15%">小计(元)</th>
+            <th width="10%">操作</th>
+        </tr>
+        </thead>
+    </table>
+    <div class="table_list mt10">
+        <div class="J_cart_wrapper"></div>
+
+
+    </div>
+
+    <div class="know">
+        <dl>
+            <dt><i></i>海外购商品购前须知<i class="r-con"></i></dt>
+            <dd>1、您在喆兔海外购购买的商品是经过海关监管辖的保税区发货，请在下单之初提交与收件人姓名一致身份证号进行实名验证。</dd>
+            <dd>2、因为涉及跨境订单推送，您下单后将相关信息将直接被推送至海关系统进行报关审核，故订单无法修改、取消，敬请悉知。</dd>
+            <dd>3、海外购商品需备案清关，下单后3-7个工作日发货；节假日或双11等活动，发货时间会略有延误。</dd>
+            <dd>4、海外购商品由于其特殊性，相关售后服务请阅读<a href="http://www.zzt.tm/gwzn-msd.htm#msdyssz" target="_blank" class="blue">《喆兔海外购》退货政策</a>。
+            </dd>
+            <dd>5、若您的订单海关审核失败，系统会自动关闭订单，您支付的款项会在3-5个工作日原路退回，敬请悉知。</dd>
+        </dl>
+    </div>
+
+</div>
+
+<script id="J_cartTemplate" type="text/html">
+    <table class="ac mb10">
+        <% for (var i = 0; i < products.length; i ++) { %>
+            <thead>
+            <tr>
+                <td class="t-bar" colspan="7">
+                    <div class="t-bar-l">
+                        <input type="checkbox" name="ss_check" class="J_check_specPerform" value="14046" data-spec-perform-index="<%= i %>" <%= products[i].isChecked ? 'checked' : '' %>>
+                        <%= products[i].specPerform %>
+                    </div>
+                </td>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (var j = 0; j < products[i].forSales.length; j++) { %>
+                <tr>
+                    <td width="5%">
+                        <input type="checkbox" class="J_check_product" name="ischeck" data-spec-perform-index="<%= i %>" data-product-index="<%= j %>" value="930024533783112" <%= products[i].forSales[j].isChecked ? 'checked' : '' %>>
+                    </td>
+                    <td width="5%">
+                        <a target="_blank" href="&#9;/detail-9300245337-a-14046-1.html&#10;">
+                            <img class="pic" src="http://img.zzt.tm/image/grp1/M00/08/CC/CgoKS1cV-yuEVcpHAAAAANdeJbI154.jpg"
+                                 width="60" height="60">
+                        </a>
+                    </td>
+                    <td class="al v_t">
+                        <h3>
+                            <a target="_blank" href="&#9;/detail-9300245337-a-14046-1.html&#10;" class="purple">
+                                <%= products[i].forSales[j].name %>
+                            </a>
+                        </h3>
+                        <a target="_blank" href="&#9;/detail-9300245337-a-14046-1.html&#10;" class="purple">
+                            <p class="gray">规格：S84片</p>
+                            <p class="tax-con"></p>
+                            <p data-comp-rate="0.119" id="930024533783112_compRate" data-unit-price="97">税率：11.9%</p>
+                        </a>
+                    </td>
+                    <td width="15%">
+                        <p class="c_000">¥<span id="930024533783112_price"><%=  products[i].forSales[j].price %></span></p>
+                        <span class="del"><%=  products[i].forSales[j].oldPrice %></span>
+                    </td>
+                    <td width="15%">
+                        <p class="buy_num">
+                            <a href="javascript:;" class="ico_change J_minus_product"
+                               data-total="<%=  products[i].forSales[j].total %>"
+                               data-spec-perform-index="<%= i %>"
+                               data-product-index="<%= j %>"
+                            >-</a>
+                            <input class="num_input" name="quantity" type="text" id="930024533783112_quantity"
+                                   value="<%=  products[i].forSales[j].total %>"
+                                   size="4">
+                            <a href="javascript:;" class="ico_change J_add_product"
+                               data-total="<%=  products[i].forSales[j].total %>"
+                               data-spec-perform-index="<%= i %>"
+                               data-product-index="<%= j %>"
+                            >+</a>
+                        </p>
+                        <p class="red">限购<%= products[i].forSales[j].limitNum %>件</p>
+                    </td>
+                    <td width="15%">
+                        <strong id="930024533783112_span" value="1"><%= products[i].forSales[j].total *
+                            products[i].forSales[j].price %></strong>
+                    </td>
+                    <td width="10%">
+                        <a href="javascript:;" class="c_666 J_delete_product"
+                           data-spec-perform-index="<%= i %>"
+                           data-product-index="<%= j %>"
+                        >删除</a>
+                    </td>
+                </tr>
+            <% } %>
+        <% } %>
+        </tbody>
+    </table>
+    <div class="total_l">
+        <p>
+            <label class="select_all pointer">
+                <input type="checkbox" class="J_check_all" <%= isChecked ? 'checked' : '' %>>全选</label>
+            <a href="javascript:clearcart()" class="ml30">清空购物车</a></p>
+        <p class="mt30"><a onclick="goindex();" class="purples f14">继续购物</a></p>
+    </div>
+    <div class="total clearfix">
+        <div class="cost">
+            <ul class="cost-txt clearfix">
+                <li><em>已选 <span class="red" id="chkindex"><%= selected %></span> 件，商品总金额： </em>
+                    <i class="red f16b pl8"> ¥<span id="prtotalAmt"><%= price %></span> </i></li>
+                <li><em>已优惠 ： </em><i class="red f16b">-¥ <span id="privilege">0.00</span></i></li><!-- 0 -->
+                <li><em>总税额 ： </em><i class="red f16b pl8"> ¥ <span id="totalRate">69.24</span></i></li>
+                <li><em>应付金额(含税)： </em><i class="red f16b pl8"> ¥ <span id="payment">651.24</span></i></li>
+            </ul>
+            <p></p>
+            <div id="warnInfo1" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text2">海外购商品购满0元才可下单。</span>
+            </div>
+            <p></p>
+            <p></p>
+            <div id="warnInfo2" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text3">海外购商品税额已超过50元，商品应征税额在50元（含50元）以下的，海关予以免税。请您分批下单。</span>
+            </div>
+            <p></p>
+            <p></p>
+            <div id="warnInfo3" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text3">海外购商品总金额已超过2000元，请联系客服。</span>
+            </div>
+            <p></p>
+            <p></p>
+            <div id="warnInfo4" class="tax-notice ml-r" style="display: none"><span class="tax-text tax-text3">您已经超过海关规定单次购买2000元的规定，请分开下单。</span>
+            </div>
+            <p></p>
+			<span id="handle_span" class="tjbtnbox">
+				<button id="handlebtn" class="btn btnA">提交订单</button>
+				<span id="handle_span_nobuy" style="display:none;">
+					<button type="button" disabled="disabled" class="btn btnA2">提交订单</button>
+				</span>
+			</span>
+            <p></p>
+        </div>
+    </div>
+</script>
+
+<script src="dist/js/commons.bundle.js"></script>
+<script src="dist/js/cart.bundle.js"></script>
+
+</body>
+</html>
