@@ -23,7 +23,7 @@ var gulp = require('gulp'),
 var host = {
     path: 'dist/',
     port: 3000,
-    html: 'index.html'
+    html: 'detail.html'
 };
 
 //mac chrome: "Google chrome", 
@@ -117,7 +117,7 @@ gulp.task('open', function (done) {
     gulp.src('')
         .pipe(gulpOpen({
             app: browser,
-            uri: 'http://localhost:3000/app'
+            uri: 'http://localhost:3000'
         }))
         .on('end', done);
 });

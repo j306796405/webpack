@@ -7,7 +7,7 @@
 /******/ 	// "0" means "already loaded"
 /******/ 	// Array means "loading", array contains callbacks
 /******/ 	var installedChunks = {
-/******/ 		2:0
+/******/ 		3:0
 /******/ 	};
 /******/ 	
 /******/ 	// The require function
@@ -50,7 +50,7 @@
 /******/ 			var script = document.createElement('script');
 /******/ 			script.type = 'text/javascript';
 /******/ 			script.charset = 'utf-8';
-/******/ 			script.src = require.p + "" + {"1":"abcb7633a37007243e58","2":"09319dd82fc30f720139"}[chunkId] + ".js";
+/******/ 			script.src = require.p + "" + chunkId + ".chunk.js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -62,7 +62,7 @@
 /******/ 	require.cache = installedModules;
 /******/ 	
 /******/ 	// __webpack_public_path__
-/******/ 	require.p = "dist/js/";
+/******/ 	require.p = "";
 /******/ 	
 /******/ 	// install a JSONP callback for chunk loading
 /******/ 	window["webpackJsonp"] = function webpackJsonpCallback(chunkIds, moreModules) {

@@ -7,7 +7,7 @@ var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var srcDir = path.resolve(process.cwd(), 'src');
 
 //获取多页面的每个入口文件，用于配置中的entry
-function getEntry() {
+/*function getEntry() {
     var jsPath = path.resolve(srcDir, 'js');
     var dirs = fs.readdirSync(jsPath);
     var matchs = [], files = {};
@@ -20,30 +20,41 @@ function getEntry() {
     });
     console.log(JSON.stringify(files));
     return files;
-}
+}*/
 
 module.exports = {
     cache: true,
     devtool: "source-map",
-    entry: getEntry(),
+    entry: {
+        index: "./src/js/page/index",
+        detail: './src/js/page/detail'
+    },
     output: {
-        path: path.join(__dirname, "dist/js/"),
-        publicPath: "dist/js/",
+        path: path.join(__dirname, "dist/js"),
+        // publicPath: "dist/js/",
         filename: "[name].js",
-        chunkFilename: "[chunkhash].js"
+        chunkFilename: "[id].chunk.js"
     },
     resolve: {
         alias: {
             jquery: srcDir + "/js/lib/jquery.min.js",
-            core: srcDir + "/js/core",
-            ui: srcDir + "/js/ui",
-            artTemplate: srcDir + "/js/lib/template-native.js",
-            fly: srcDir + "/js/lib/jquery.fly.js",
-            requestAnimationFrame: srcDir + "/js/lib/requestAnimationFrame.js",
+            artTemplate: srcDir + "/js/lib/template-native.js"
         }
+    },
+    module: {
+        loaders: []
     },
     plugins: [
         new CommonsChunkPlugin('common.js'),
+        /*new webpack.optimize.CommonsChunkPlugin({
+            name: 'commons', // 将公共模块提取，生成名为`commons`的chunk
+            chunks: config.chunks
+        })*/
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "windows.jQuery": "jquery"
+        })
         /*new uglifyJsPlugin({
             compress: {
                 warnings: false

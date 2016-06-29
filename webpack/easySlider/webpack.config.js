@@ -16,14 +16,13 @@ var config = {
 for(var key in config.entry){
     config.chunks.push(key);
 }
-console.log(config);
 
 module.exports = {
     entry: config.entry,
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].js',
-        // publicPath: "/easySlide/dist/",
+        // publicPath: path.join(__dirname, 'dist'),
         chunkFilename: '[id].chunk.js'
     },
     module: {
