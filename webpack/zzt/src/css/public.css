@@ -2,7 +2,7 @@
 body, html {
     height: 100%;
     width: 100%;
-    min-width: 1000px
+    min-width: 1000px;
 }
 
 a, input:focus, textarea:focus {
@@ -44,7 +44,7 @@ body {
     color: #444;
     word-wrap: break-word;
     word-break: break-all;
-    background: #f6fbff
+    background: #f6fbff;
 }
 
 .clear, .clearfix:after {

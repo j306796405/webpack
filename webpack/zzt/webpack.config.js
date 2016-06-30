@@ -21,13 +21,15 @@ module.exports = {
     entry: config.entry,
     output: {
         path: path.join(__dirname, 'dist/js'),
-        publicPath: 'dist/js/',
+        //根据gulpfile中配置的browser-sync任务的启动目录做出相应的设置
+        publicPath: '/js/',
         filename: "[name].bundle.js",
         chunkFilename: "[id].chunk.js"
     },
     resolve: {
         alias: {
-            jquery: path.join(__dirname, 'src/js/lib/jquery.min.js')
+            jquery: path.join(__dirname, 'src/js/lib/jquery.min.js'),
+            lib: path.join(__dirname, 'src/js/lib/')
         }
     },
     module: {
@@ -40,7 +42,8 @@ module.exports = {
     },
     plugins: [
         new webpack.ProvidePlugin({
-            $: 'jquery'
+            $: 'jquery',
+            jQuery: 'jquery'
         }),
         //多入口时可以提出公共代码
         new webpack.optimize.CommonsChunkPlugin({

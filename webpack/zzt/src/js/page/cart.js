@@ -222,3 +222,10 @@ Cart.prototype = {
 
 var cart = new Cart(data, '.J_cart_wrapper', 'J_cartTemplate');
 cart._renderCart();
+
+$('#popupBtn').on('click', function(){
+    require.ensure(["lib/jquery.bpopup.js"], function(require) {
+        var $bPopup = require('lib/jquery.bpopup.js');
+        $('#bPopup').bPopup();
+    })
+})
