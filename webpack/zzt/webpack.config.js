@@ -9,7 +9,8 @@ var path = require('path'),
 var config = {
     entry: {
         cart: "./src/js/page/cart",
-        detail: './src/js/page/detail'
+        detail: './src/js/page/detail',
+        commons: ['./src/js/module/header']
     },
     chunks: []
 }

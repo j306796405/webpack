@@ -386,7 +386,7 @@ input::-moz-focus-inner {
 .header_servers {
     width: 434px;
     height: 48px;
-    background: url(../img/comm2.png) no-repeat;
+    background: url(../images/comm2.png) no-repeat;
     position: absolute;
     top: 30px;
     right: 0

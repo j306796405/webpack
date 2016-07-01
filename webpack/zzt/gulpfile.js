@@ -43,27 +43,27 @@ gulp.task('lessmin', function () {
 
 //将js加上10位md5,并修改html中的引用路径，该动作依赖build-js
 gulp.task('md5:js', ['build-js'], function (done) {
-    gulp.src('dist/js/*.js')
+    /*gulp.src('dist/js/!*.js')
         .pipe(md5(10, 'dist/page/!*.html'))
         .pipe(gulp.dest('dist/js'))
         .on('error', function(){
             console.log('md5:js');
-        })
+        })*/
 });
 
 //将css加上10位md5，并修改html中的引用路径
 gulp.task('md5:css', [], function () {
-    gulp.src('dist/css/*.css')
-        .pipe(md5(10, 'dist/*.html'))
+    /*gulp.src('dist/css/!*.css')
+        .pipe(md5(10, 'dist/!*.html'))
         .pipe(gulp.dest('dist/css'))
         .on('error', function(){
             console.log('md5:css');
-        })
+        })*/
 });
 
 //用于在html文件中直接include文件
 gulp.task('fileinclude', function () {
-    gulp.src(['src/*.html'])
+    gulp.src(['src/**/*.html'])
         .pipe(fileinclude({
           prefix: '@@',
           basepath: '@file'

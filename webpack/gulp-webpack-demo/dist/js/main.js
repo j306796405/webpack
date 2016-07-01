@@ -1,5 +1,5 @@
-webpackJsonp([2],[function(e,t,n){/*! functions.js */
-var r=n(1);r(window).load(function(){r(".startBtn").on("click",function(){n.e(3,function(e){r.fn.slider=e(4);r(".banner").slider({dots:!0,fluid:!0,arrows:!0})})})})}]);
+webpackJsonp([2],[function(n,t,i){/*! functions.js */
+var e=i(1);e(window).load(function(){e(".startBtn").on("click",function(){i.e(3,function(n){e.fn.slider=n(2);e(".banner").slider({dots:!0,fluid:!0,arrows:!0})})})})}]);
 /*
 //@ sourceMappingURL=main.js.map
 */
